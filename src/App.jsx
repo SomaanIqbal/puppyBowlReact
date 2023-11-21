@@ -12,7 +12,7 @@ const [selectedPlayer, setSelectedPlayer] = useState(undefined)
   return (
     
     <>
-      {selectedPlayer ? (<SinglePlayer player={selectedPlayer} poop={setSelectedPlayer} />) : <AllPlayers setSelectedPlayer={setSelectedPlayer} />} 
+      {selectedPlayer ? (<SinglePlayer player={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />) : <AllPlayers setSelectedPlayer={setSelectedPlayer} />} 
     </>
    
   )

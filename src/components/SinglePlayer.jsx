@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const SinglePlayer = ({ player,poop }) => {
+const SinglePlayer = ({ player,setSelectedPlayer }) => {
   const [playerDetails, setPlayerDetails] = useState(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const SinglePlayer = ({ player,poop }) => {
   return (
     <div>
       {playerDetails ? <div><h2>Name: {playerDetails.name}</h2><h2>Breed: {playerDetails.breed}</h2><h2>ID: {playerDetails.id}</h2><h2>Status: {playerDetails.status}</h2><img src={playerDetails.imageUrl}/></div> : <h2>"loading..."</h2>}
-      <button onClick={() => {poop(undefined)}}>Go Back Now</button>
+      <button onClick={() => {setSelectedPlayer(undefined)}}>Go Back Now</button>
     </div>
   );
 };
